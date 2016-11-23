@@ -88,7 +88,7 @@ cd $httpDir$rootDir
 ###########################################################################
 drush dl -y admin_menu context google_analytics
 drush dl wysiwyg --dev
-drush -y en features fontawesome empty_front_page wysiwyg admin_menu admin_menu_toolbar context_ui field_group redirect googleanalytics libraries link metatag module_filter page_title pathauto globalredirect search404 token transliteration xmlsitemap entitycache
+drush -y en features fontawesome imce_wysiwyg empty_front_page wysiwyg admin_menu admin_menu_toolbar context_ui field_group redirect googleanalytics libraries link metatag module_filter page_title pathauto globalredirect search404 token transliteration xmlsitemap entitycache
 
 # Ckeditor
 ##############################
