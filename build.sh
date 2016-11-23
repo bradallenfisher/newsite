@@ -65,10 +65,14 @@ mkdir $httpDir$rootDir$modules\contrib
 mkdir $httpDir$rootDir$modules\custom
 mkdir $httpDir$rootDir$modules\features
 
-
 # Download modules and themes
 ##########################################################
 drush -y dl omega
+cd $httpDir$rootDir$theme
+git clone https://github.com/bradallenfisher/kelly.git
+drush en kelly -y
+drush vset theme_default kelly -y
+
 # Disable some core modules
 ##########################################################
 drush -y dis color toolbar shortcut dashboard overlay help
@@ -80,6 +84,7 @@ cd $httpDir$rootDir
 
 # Enable modules
 ###########################################################################
+drush dl -y admin_menu context google_analytics
 drush -y en admin_menu admin_menu_toolbar context_ui field_group redirect googleanalytics libraries link metatag module_filter page_title pathauto globalredirect search404 token transliteration xmlsitemap entitycache
 
 # Pre configure settings
@@ -123,7 +128,6 @@ echo -e "////////////////////////////////////////////////////"
 
 echo "$PWD"
 
-drush omega-wizard
 drush -y pm-disable bartik
 drush -y pm-uninstall color
 drush -y pm-uninstall dashboard
@@ -138,5 +142,5 @@ drush -y pm-enable block
 
 cd $httpDir$rootDir
 echo "$PWD"
-
 drush cc all
+drush uli
