@@ -85,7 +85,7 @@ cd $httpDir$rootDir
 # Enable modules
 ###########################################################################
 drush dl -y admin_menu context google_analytics
-drush -y en admin_menu admin_menu_toolbar context_ui field_group redirect googleanalytics libraries link metatag module_filter page_title pathauto globalredirect search404 token transliteration xmlsitemap entitycache
+drush -y en fontawesome admin_menu admin_menu_toolbar context_ui field_group redirect googleanalytics libraries link metatag module_filter page_title pathauto globalredirect search404 token transliteration xmlsitemap entitycache
 
 # Pre configure settings
 ###########################################################################
