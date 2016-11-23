@@ -70,6 +70,8 @@ mkdir $httpDir$rootDir$modules\features
 drush -y dl omega
 cd $httpDir$rootDir$theme
 git clone https://github.com/bradallenfisher/kelly.git
+cd kelly
+rm .git -rf
 drush en kelly -y
 drush vset theme_default kelly -y
 
@@ -85,7 +87,14 @@ cd $httpDir$rootDir
 # Enable modules
 ###########################################################################
 drush dl -y admin_menu context google_analytics
-drush -y en fontawesome admin_menu admin_menu_toolbar context_ui field_group redirect googleanalytics libraries link metatag module_filter page_title pathauto globalredirect search404 token transliteration xmlsitemap entitycache
+drush dl wysiwyg --dev
+drush -y en features fontawesome wysiwyg admin_menu admin_menu_toolbar context_ui field_group redirect googleanalytics libraries link metatag module_filter page_title pathauto globalredirect search404 token transliteration xmlsitemap entitycache
+
+# Ckeditor
+##############################
+cd $httpDir$rootDir$libraries
+wget http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.6.0/ckeditor_4.6.0_full.zip
+unzip ckeditor_4.6.0_full.zip
 
 # Pre configure settings
 ###########################################################################
