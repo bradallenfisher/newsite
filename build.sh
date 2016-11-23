@@ -99,7 +99,7 @@ unzip ckeditor_4.6.0_full.zip
 cd $httpDir$rootDir$modules
 cd features
 git clone https://github.com/bradallenfisher/kelly_wysiwyg.git
-drush en kelly_wysiwyg
+drush en kelly_wysiwyg -y
 
 
 # Pre configure settings
