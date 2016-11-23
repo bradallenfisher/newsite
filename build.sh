@@ -92,14 +92,15 @@ drush -y en features fontawesome imce_wysiwyg empty_front_page wysiwyg admin_men
 
 # Ckeditor
 ##############################
+cd $httpDir$rootDir$libraries
+wget http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.6.0/ckeditor_4.6.0_full.zip
+unzip ckeditor_4.6.0_full.zip
+
 cd $httpDir$rootDir$modules
 cd features
 git clone https://github.com/bradallenfisher/kelly_wysiwyg.git
 drush en kelly_wysiwyg
 
-cd $httpDir$rootDir$libraries
-wget http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.6.0/ckeditor_4.6.0_full.zip
-unzip ckeditor_4.6.0_full.zip
 
 # Pre configure settings
 ###########################################################################
