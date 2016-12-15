@@ -70,7 +70,7 @@ mkdir $httpDir$rootDir$modules\features
 # Download modules and themes
 ##########################################################
 drush -y dl omega
-cd $httpDir$rootDir$theme
+cd $httpDir$rootDir$themes
 git clone https://github.com/bradallenfisher/kelly.git
 cd kelly
 rm .git -rf
