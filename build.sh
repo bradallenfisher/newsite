@@ -29,8 +29,8 @@ dbsupw="" # using no
 
 # Admin
 ##########################################################
-AdminUsername="ADMIN"
-AdminPassword="ADMINPASSWORD"
+AdminUsername="admin"
+AdminPassword="pass"
 adminEmail="email@email.com"
 ##########################################################
 
