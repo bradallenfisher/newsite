@@ -20,7 +20,7 @@ siteSlogan="SLOGAN"
 ##########################################################
 dbHost="localhost"
 dbName="drupal"
-dbUser="drupal"
+dbUser="root"
 dbPassword=""
 dbsu="root" # root user
 dbsupw="" # using no
