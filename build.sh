@@ -3,10 +3,11 @@
 # Directories
 ##########################################################
 httpDir="/var/www/html/"
-rootDir="YOURSITE/" #leave blank to set http directory as root directory.
+rootDir="drupal/" #leave blank to set http directory as root directory.
 libraries="sites/all/libraries/"
 modules="sites/all/modules/"
 files="sites/default/files/"
+themes="sites/all/themes/"
 ##########################################################
 
 # Site
@@ -18,12 +19,13 @@ siteSlogan="SLOGAN"
 # Database
 ##########################################################
 dbHost="localhost"
-dbName="DBNAME"
-dbUser="DBUSER"
-dbPassword="DBPASSWORD"
+dbName="drupal"
+dbUser="drupal"
+dbPassword=""
 dbsu="root" # root user
-dbsupw="SECUREPASSWORD" # using yes
+dbsupw="" # using no
 ##########################################################
+
 
 # Admin
 ##########################################################
