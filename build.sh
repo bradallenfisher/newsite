@@ -124,6 +124,7 @@ mkdir $files\private
 mkdir $files\tmp
 cd $httpDir$rootDir$files
 sudo chown apache:apache tmp
+sudo chown www-data:www-data tmp
 sudo chmod 775 tmp
 
 # Change file destinations
@@ -132,6 +133,7 @@ drush vset -y file_temporary_path "sites/default/files/tmp"
 
 # Change ownership of new files locations.
 sudo chown -R apache:apache $httpDir$rootDir$files
+sudo chown -R www-data:www-data $httpDir$rootDir$files
 sudo chmod -R 775 $httpDir$rootDir$files
 
 # Set the site name using the variable in top of script
